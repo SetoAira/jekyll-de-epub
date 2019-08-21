@@ -1,0 +1,6 @@
+---
+collections:
+  scenario:
+    permalink: "/item/xhtml/:name"
+    output: true
+
