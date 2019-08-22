@@ -4,3 +4,5 @@ collections:
     permalink: "/item/xhtml/:name"
     output: true
 
+sass:
+  style: compressed
