@@ -1,7 +1,18 @@
 ---
+#作品名
+title: "jekyll-de-epub"
+
+#言語
+lang: "ja"
+
+#SVGサイズ指定
+svg:
+  width: 1443
+  height: 2048
+
 collections:
   scenario:
-    permalink: "/item/xhtml/:name"
+    permalink: "/OPS/xhtml/:name"
     output: true
 
 sass:
