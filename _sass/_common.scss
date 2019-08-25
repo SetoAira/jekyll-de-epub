@@ -100,3 +100,54 @@
   -epub-text-emphasis-style:   open triangle;
 }
 
+// 画像のフィット
+.fit {
+  display:            inline-block;
+  page-break-inside:  avoid;
+  max-height:         100%;
+  max-width:          100%;
+}
+
+// 文字寄せ
+.align-center{ text-align: center; }
+.align-right{ text-align: right; }
+.align-left{ text-align: left; }
+.align-justify { text-align: justify; }
+
+/* 上付文字 */
+.super {
+  font-size:      smaller;
+  vertical-align: super;
+}
+/* 下付文字 */
+.sub {
+  font-size:      smaller;
+  vertical-align: sub;
+}
+
+// フォント種
+.mfont { font-family: serif; }
+.gfont { font-family: sans-serif; }
+
+/* 太字
+---------------------------------------------------------------- */
+/* 太字 */
+.bold {
+  font-weight: bold;
+}
+/* 太字解除 */
+.font-weight-normal {
+  font-weight: normal;
+}
+
+
+/* 斜体
+---------------------------------------------------------------- */
+/* 斜体 */
+.italic {
+  font-style: italic;
+}
+/* 斜体解除 */
+.font-style-normal {
+  font-style: normal;
+}

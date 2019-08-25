@@ -42,6 +42,10 @@ svg:
   width: 1443
   height: 2048
 
+#ギャラリーの出力
+use-gallery: true
+gallery-text: "このシーンを読む"
+
 collections:
   scenario:
     permalink: "/OPS/xhtml/:title"

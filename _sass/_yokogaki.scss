@@ -12,7 +12,7 @@ html,
     border-width: 1px;
     border-color: #000000;
   }
-  
+
   // 字下げ
   .start-1em { margin-left: 1em; }
   .start-2em { margin-left: 2em; }
@@ -26,4 +26,7 @@ html,
   .end-4em { margin-right: 4em; }
   .end-6em { margin-right: 6em; }
 
+  .fit {
+    vertical-align: top;
+  }
 }
