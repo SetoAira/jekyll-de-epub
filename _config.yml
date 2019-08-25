@@ -1,9 +1,34 @@
 ---
 #作品名
-title: "jekyll-de-epub"
+title:
+  name: "jekyllでePub"
+  yomi: "ジキルデイーパブ"
+  ruby: "<ruby>jekyll<rt>ジキル</rt></ruby>でePub"
+pre-title:
+  name: "サブタイトル・前"
+post-title:
+  name: "サブタイトル・後"
+  ruby: "サブタイトル・<ruby>後<rt>うしろ</rt></ruby>"
+
+#著者名
+auther:
+- name: "瀬戸愛羅"
+  yomi: "セトアイラ"
+  ruby: "<ruby>瀬戸<rt>せと</rt></ruby>　<ruby>愛羅<rt>あいら</rt></ruby>"
+- name: "著者2"
+  yomi: "チョシャ2"
+
+#レーベル
+label: "レーベル電書"
+
+#ロゴ（ファイル名）
+logo: "logo.jpg"
 
 #言語
 lang: "ja"
+
+#方向（縦書き：rtl、横書き：ltr）
+direction: rtl
 
 #SVGサイズ指定
 svg:

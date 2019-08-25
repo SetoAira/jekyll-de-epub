@@ -1,0 +1,13 @@
+---
+layout: default
+permalink: "/OPS/xhtml/titlepage.xhtml"
+direction: ltr
+---
+<div class="title-page">
+  {% if site.pre-title != nil %}<h2>{% if site.pre-title.ruby != nil %}{{ site.pre-title.ruby }}{% else %}{{ site.pre-title.name }}{% endif %}</h2>{% endif %}
+  <h1>{% if site.title.ruby != nil %}{{ site.title.ruby }}{% else %}{{ site.title.name }}{% endif %}</h1>
+  {% if site.post-title != nil %}<h2>{% if site.post-title.ruby != nil %}{{ site.post-title.ruby }}{% else %}{{ site.post-title.name }}{% endif %}</h2>{% endif %}
+  <p class="auther">{% for auther in site.auther %}{% if auther.ruby %}{{ auther.ruby }}{% else %}{{ auther.name }}{% endif %}{% if forloop.last != true %}<br />{% endif %}{% endfor %}</p>
+  <img src="../image/{{ site.logo }}" />
+  <p class="label">{{ site.label }}</p>
+</div>

@@ -1,0 +1,29 @@
+// 縦書き横書き共通
+
+// タイトルページ
+.title-page {
+  margin: 10%;
+  border: solid 1px #000;
+  text-align: center;
+  padding: 2em;
+
+  img {
+    max-width: 30%;
+    display: block;
+    margin: 2em auto;
+  }
+
+  h1 {
+    font-size: 125%;
+    line-height: 175%;
+    padding: 0.5em;
+  }
+  h2 {
+    font-size: 85%;
+    line-height: 175%;
+  }
+
+  .auther {
+    margin: 2em 0;
+  }
+}
