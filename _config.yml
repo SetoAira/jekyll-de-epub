@@ -37,8 +37,14 @@ svg:
 
 collections:
   scenario:
-    permalink: "/OPS/xhtml/:name"
+    permalink: "/OPS/xhtml/:title"
     output: true
+
+defaults:
+- scope:
+    path: _scenario
+  values:
+    layout: text
 
 sass:
   style: compact
