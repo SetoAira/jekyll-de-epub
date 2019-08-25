@@ -1,4 +1,7 @@
 // 縦書き横書き共通
+.main {
+  margin: 2em;
+}
 
 // タイトルページ
 .title-page {
@@ -27,3 +30,51 @@
     margin: 2em 0;
   }
 }
+
+// 注意書き
+.caution {
+  margin-top: 40%;
+}
+
+// 圏点・傍点
+.em-sesame {
+  -webkit-text-emphasis-style: filled sesame;
+  -epub-text-emphasis-style:   filled sesame;
+}
+.em-sesame-open {
+  -webkit-text-emphasis-style: open sesame;
+  -epub-text-emphasis-style:   open sesame;
+}
+.em-dot {
+  -webkit-text-emphasis-style: filled dot;
+  -epub-text-emphasis-style:   filled dot;
+}
+.em-dot-open {
+  -webkit-text-emphasis-style: open dot;
+  -epub-text-emphasis-style:   open dot;
+}
+.em-circle {
+  -webkit-text-emphasis-style: filled circle;
+  -epub-text-emphasis-style:   filled circle;
+}
+.em-circle-open {
+  -webkit-text-emphasis-style: open circle;
+  -epub-text-emphasis-style:   open circle;
+}
+.em-double-circle {
+  -webkit-text-emphasis-style: filled double-circle;
+  -epub-text-emphasis-style:   filled double-circle;
+}
+.em-double-circle-open {
+  -webkit-text-emphasis-style: open double-circle;
+  -epub-text-emphasis-style:   open double-circle;
+}
+.em-triangle {
+  -webkit-text-emphasis-style: filled triangle;
+  -epub-text-emphasis-style:   filled triangle;
+}
+.em-triangle-open {
+  -webkit-text-emphasis-style: open triangle;
+  -epub-text-emphasis-style:   open triangle;
+}
+

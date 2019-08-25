@@ -1,0 +1,21 @@
+// 横書き用設定
+
+html,
+.ltr {
+  -webkit-writing-mode: horizontal-tb;
+  -epub-writing-mode:   horizontal-tb;
+
+  // 字下げ
+  .start-1em { margin-left: 1em; }
+  .start-2em { margin-left: 2em; }
+  .start-3em { margin-left: 3em; }
+  .start-4em { margin-left: 4em; }
+  .start-6em { margin-left: 6em; }
+  // 字上げ
+  .end-1em { margin-right: 1em; }
+  .end-2em { margin-right: 2em; }
+  .end-3em { margin-right: 3em; }
+  .end-4em { margin-right: 4em; }
+  .end-6em { margin-right: 6em; }
+
+}

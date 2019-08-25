@@ -42,3 +42,6 @@ collections:
 
 sass:
   style: compact
+
+kramdown:
+  hard_wrap: true
