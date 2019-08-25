@@ -5,6 +5,14 @@ html,
   -webkit-writing-mode: horizontal-tb;
   -epub-writing-mode:   horizontal-tb;
 
+  // 区切り線
+  hr {
+    margin: 0.5em 0;
+    border-style: solid none none none;
+    border-width: 1px;
+    border-color: #000000;
+  }
+  
   // 字下げ
   .start-1em { margin-left: 1em; }
   .start-2em { margin-left: 2em; }

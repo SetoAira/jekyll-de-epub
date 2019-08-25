@@ -1,0 +1,17 @@
+---
+layout: default
+permalink: "/OPS/xhtml/colophon.xhtml"
+direction: ltr
+---
+<div class="colophon">
+  {% if site.pre-title != nil %}<h2>{% if site.pre-title.ruby != nil %}{{ site.pre-title.ruby }}{% else %}{{ site.pre-title.name }}{% endif %}</h2>{% endif %}
+  <h1>{% if site.title.ruby != nil %}{{ site.title.ruby }}{% else %}{{ site.title.name }}{% endif %}</h1>
+  {% if site.post-title != nil %}<h2>{% if site.post-title.ruby != nil %}{{ site.post-title.ruby }}{% else %}{{ site.post-title.name }}{% endif %}</h2>{% endif %}
+  <hr />
+  <p class="auther">{% for auther in site.auther %}{% if auther.ruby %}{{ auther.ruby }}{% else %}{{ auther.name }}{% endif %}{% if forloop.last != true %}<br />{% endif %}{% endfor %}</p>
+  <p class="label">{{ site.label }}</p>
+  <p>20xx年xx月xx日　発行<br />{{ "today" | date: "%Y年%m月%d日"}}　更新</p>
+  <p>発行者　○○　○○<br />
+    発行　{{ site.company.name }}</p>
+  <p class="copyright">{% for auther in site.auther %}©{{ auther.en }}{% if forloop.last != true %}<br />{% endif %}{% endfor %}</p>
+</div>

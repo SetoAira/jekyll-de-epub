@@ -15,8 +15,15 @@ auther:
 - name: "瀬戸愛羅"
   yomi: "セトアイラ"
   ruby: "<ruby>瀬戸<rt>せと</rt></ruby>　<ruby>愛羅<rt>あいら</rt></ruby>"
+  en: "Seto Aira"
 - name: "著者2"
   yomi: "チョシャ2"
+  en: "Auther2"
+
+#会社
+company:
+  name: "会社名"
+  yomi: "カイシャメイ"
 
 #レーベル
 label: "レーベル電書"

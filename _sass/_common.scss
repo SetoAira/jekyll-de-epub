@@ -36,6 +36,28 @@
   margin-top: 40%;
 }
 
+// 奥付
+.colophon {
+  margin: 2em;
+  h1 {
+    font-size: 125%;
+    line-height: 175%;
+  }
+  h2 {
+    font-size: 85%;
+    line-height: 175%;
+  }
+  p {
+    font-size: 85%;
+    padding: 0 0 0.5em 0;
+
+    .copyright {
+      font-size: 80%;
+      line-height: 120%;
+    }
+  }
+}
+
 // 圏点・傍点
 .em-sesame {
   -webkit-text-emphasis-style: filled sesame;
