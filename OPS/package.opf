@@ -1,0 +1,36 @@
+---
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" xml:lang="{{ site.lang }}" unique-identifier="un-id">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <dc:title id="title">{{ site.title.name }}</dc:title>
+  <meta refines="#title" property="file-as">{{ site.title.yomi }}</meta>
+
+{% for auther in site.auther %}<dc:creator id="creator{{ forloop.index }}">{{ auther.name }}</dc:creator>
+<meta refines="#creator01" property="role" scheme="marc:relators">aut</meta>
+<meta refines="#creator01" property="file-as">{{ auther.yomi }}</meta>
+<meta refines="#creator01" property="display-seq">{{ forloop.index }}</meta>{% endfor %}
+
+  <dc:language>{{ site.lang }}</dc:language>
+
+  <dc:identifier id="un-id">{{ site.id }}</dc:identifier>
+  <meta property="dcterms:modified">{{ "now" | date: "%Y-%m-%dT%H:%M:%SZ" }}</meta>
+</metadata>
+
+<manifest>
+  {% for item in site.static_files %}{% assign extname = item.extname %}{% if site.data.media-type[extname] != nil %}<item media-type="{{ site.data.media-type[extname] }}" id="{% if extname == ".xhtml" %}p-{% endif %}{{ item.basename }}" href="{{ item.path | remove_first: "/OPS/" }}"{% if item.basename == 'cover' %} properties="cover-image"{% endif %}/>
+  {% endif %}{% endfor %}
+  {% for item in site.pages %}{% assign name = item.url | split: "/" | last %}{% assign extname = name | split: "." | last | prepend: "." %}{% if site.data.media-type[extname] != nil %}<item media-type="{{ site.data.media-type[extname] }}" id="{% if extname == ".xhtml" %}p-{% endif %}{{ name | split: "." | first }}" href="{{ item.url | remove_first: "/OPS/" }}"{% if item.layout == 'svg' %} properties="svg"{% endif %}/>
+  {% endif %}{% endfor %}
+  {% for item in site.scenario %}{% assign name = item.url | split: "/" | last %}<item media-type="application/xhtml+xml" id="p-{{ name | split: "." | first }}"  href="{{ item.url | remove_first: "/OPS/" }}"/>
+  {% endfor %}
+</manifest>
+
+<spine page-progression-direction="{{ site.direction }}">
+  {% for item in site.data.spine %}{% if item.name == "scenario" %}{% assign pages = site.scenario | sort: 'name' %}{% for page in pages %}<itemref idref="p-{{ page.title | split: "." | first }}" linear="yes"{% if item.properties != nil %} properties="{{ item.properties }}"{% endif %}/>
+  {% endfor %}{% elsif item.name == "gallery" and site.use-gallery %}{% for page in site.data.gallery %}<itemref idref="p-{{ page.name | split: "." | first }}" linear="yes"{% if item.properties != nil %} properties="{{ item.properties }}"{% endif %}/>
+  {% endfor %}{% else %}<itemref idref="p-{{ item.name }}" linear="{% if item.linear == "no" %}no{% else %}yes{% endif %}"{% if item.properties != nil %} properties="{{ item.properties }}"{% endif %}/>
+  {% endif %}{% endfor %}
+</spine>
+
+</package>

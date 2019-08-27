@@ -1,0 +1,10 @@
+- name: cover
+  properties: "rendition:spread-none rendition:page-spread-center"
+  linear: yes
+- name: caution
+  properties: "page-spread-right"
+- name: titlepage
+- name: toc
+- name: scenario
+- name: gallery
+- name: colophon

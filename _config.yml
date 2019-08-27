@@ -34,6 +34,9 @@ logo: "logo.jpg"
 #言語
 lang: "ja"
 
+#本のファイルid
+id: "urn:uuid:8af73a92-2ebe-4f9e-88c5-6f351a897091"
+
 #方向（縦書き：rtl、横書き：ltr）
 direction: rtl
 

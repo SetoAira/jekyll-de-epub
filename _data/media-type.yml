@@ -1,0 +1,17 @@
+#拡張子からmedia-typeへの変換用
+.gif: image/gif
+.jpg: image/jpeg
+.jpeg: image/jpeg
+.png: image/png
+.svg: image/svg+xml
+.mp3: audio/mpeg
+.mp4: audio/mp4
+.css: text/css
+.ttf: font/ttf
+.otf: font/otf
+.woff: font/woff
+.woff2: font/woff2
+.xhtml: application/xhtml+xml
+.js: text/javascript
+.smil: application/smil+xml
+.sml: application/smil+xml
