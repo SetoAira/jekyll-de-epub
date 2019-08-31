@@ -1,0 +1,19 @@
+---
+permalink: "/OPS/navigation.xhtml"
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="{{ site.lang }}">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Navigation</title>
+</head>
+<body>
+  <nav epub:type="toc">
+    <ol>
+{% for item in site.data.spine %}{% if item.title %}{% if item.name == "gallery" %}{% assign ngal = site.data.gallery[0] %}      <li><a href="xhtml/{{ ngal.name }}">{{ item.title }}</a></li>{% else %}      <li><a href="xhtml/{{ item.name }}.xhtml">{{ item.title }}</a></li>{% endif %}
+{% elsif item.name == "scenario" %}{% for item in site.scenario %}{% assign name = item.url | remove_first: "/OPS/" %}{{ item.content | nav: name }}{% endfor %}{% endif %}{% endfor %}
+    </ol>
+  </nav>
+</body>
+</html>

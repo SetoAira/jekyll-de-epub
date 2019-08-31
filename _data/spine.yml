@@ -1,11 +1,14 @@
 - name: cover
   properties: "rendition:spread-none rendition:page-spread-center"
   linear: yes
+  title: "表紙"
 - name: caution
   properties: "page-spread-right"
 - name: titlepage
 - name: toc
+  title: "目次"
 - name: scenario
 - name: gallery
   title: "ギャラリー"
 - name: colophon
+  title: "奥付"
