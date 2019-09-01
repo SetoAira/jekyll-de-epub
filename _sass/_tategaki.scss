@@ -11,6 +11,70 @@
     border-color: #000000;
   }
 
+  // リンク
+  a {text-decoration: overline;}
+
+//見出し
+  h1 {
+    margin: 2em 3em 0;
+  }
+  h2 {
+    margin: 2em 3em;
+  }
+  h3{
+    margin: 1em 3em;
+  }
+  
+  ol {
+    list-style-type: cjk-ideographic;
+    margin-top: 1em;
+  }
+  
+  .one-page{
+    margin: 2em -0.5em 0;
+    padding: 0 50%;
+  }
+  
+  //目次
+  ol.toc {
+    list-style-type: none;
+    margin-top:0;
+  }
+  #index {margin: 0 3em;}
+  .toc {
+    .toc-h1 {margin: 1em auto;}
+    .toc-h2 {margin: 2.5em auto 0;}
+    .toc-h3 {margin: 4em auto 0;}
+    .toc-h4 {margin: 5.5em auto 0;}
+    .toc-h5 {margin: 7em auto 0;}
+    .toc-h6 {margin: 8.5em auto 0;}
+    .toc-gal {margin: 1em 2em 0;}
+    a {text-decoration: none;}
+    a:hover,
+    a:active {text-decoration: overline;}
+  }
+
+  //縦中横
+  .tcy {
+    -webkit-text-combine:         horizontal;
+    -webkit-text-combine-upright: all;
+    text-combine-upright:         all;
+    -epub-text-combine:           horizontal;
+  }
+
+//小書き
+  .kogaki {
+    padding: 0.1em 0 0 0.25em;
+  }
+  //右線
+  .right-line {text-decoration: overline;}
+  //左線
+  .left-line {text-decoration: underline;}
+
+  //突き出しインデント
+  .h-indent-1em  { text-indent:  -1em; padding-top:  1em; }
+  .h-indent-2em  { text-indent:  -2em; padding-top:  2em; }
+  .h-indent-3em  { text-indent:  -3em; padding-top:  3em; }
   // 字下げ
   .start-1em { margin-top: 1em; }
   .start-2em { margin-top: 2em; }
@@ -24,7 +88,13 @@
   .end-4em { margin-bottom: 4em; }
   .end-6em { margin-bottom: 6em; }
 
-  .fit {
-  vertical-align: baseline;
+//画像のベースライン
+  .fit,
+  .gallery,
+  img.gaiji,
+  img.gaiji-line,
+  img.gaiji-wide {
+    vertical-align: baseline;
   }
+
 }

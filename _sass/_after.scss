@@ -1,0 +1,65 @@
+// タイトルページ
+.title-page {
+  margin: 10%;
+  border: solid 1px #000;
+  text-align: center;
+  padding: 2em;
+
+  img {
+    width: 5em;
+    display: block;
+    margin: 2em auto;
+  }
+
+  h1 {
+    font-size: 125%;
+    line-height: 175%;
+    margin: 0;
+    padding: 0.5em;
+  }
+  h2 {
+    font-size: 85%;
+    line-height: 175%;
+    margin: 0;
+  }
+
+  .auther {
+    margin: 2em 0;
+  }
+}
+
+//目次
+.toc {
+  a {color: #000;}
+  a:hover,
+  a:visited {color: #84919e;}
+}
+
+// 注意書き
+.caution {
+  margin-top: 30%;
+}
+
+// 奥付
+.colophon {
+  margin: 2em;
+  h1 {
+    font-size: 125%;
+    line-height: 175%;
+    margin: 0;
+  }
+  h2 {
+    font-size: 85%;
+    line-height: 175%;
+    margin: 0;
+  }
+  p {
+    font-size: 85%;
+    padding: 0 0 0.5em 0;
+
+    .copyright {
+      font-size: 80%;
+      line-height: 120%;
+    }
+  }
+}

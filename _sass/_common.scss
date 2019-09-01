@@ -1,62 +1,40 @@
 // 縦書き横書き共通
+h1 {
+  display: block;
+  font-size: 125%;
+}
+h2 {
+  font-size: 110%;
+}
+
+a {color: #005aff;}
+a:hover,
+a:visited {
+  color: #909;
+}
+
+blockquote {
+  background-color: #c8c8cb;
+  font-style: italic;
+  margin: 1em;
+  padding: 0.5em;
+}
+
 .main {
-  margin: 2em;
+  margin: 1em;
+}
+.one-page {
+  margin-right: -0.5em;
+  margin-left: 0.5em;
+  padding-right: 50%;
+  padding-left: 50%;
 }
 
-// タイトルページ
-.title-page {
-  margin: 10%;
-  border: solid 1px #000;
-  text-align: center;
-  padding: 2em;
-
-  img {
-    max-width: 30%;
-    display: block;
-    margin: 2em auto;
-  }
-
-  h1 {
-    font-size: 125%;
-    line-height: 175%;
-    padding: 0.5em;
-  }
-  h2 {
-    font-size: 85%;
-    line-height: 175%;
-  }
-
-  .auther {
-    margin: 2em 0;
-  }
+//リスト
+li {
+  line-height: 175%;
 }
 
-// 注意書き
-.caution {
-  margin-top: 40%;
-}
-
-// 奥付
-.colophon {
-  margin: 2em;
-  h1 {
-    font-size: 125%;
-    line-height: 175%;
-  }
-  h2 {
-    font-size: 85%;
-    line-height: 175%;
-  }
-  p {
-    font-size: 85%;
-    padding: 0 0 0.5em 0;
-
-    .copyright {
-      font-size: 80%;
-      line-height: 120%;
-    }
-  }
-}
 
 // 圏点・傍点
 .em-sesame {
@@ -102,10 +80,44 @@
 
 // 画像のフィット
 .fit {
-  display:            inline-block;
-  page-break-inside:  avoid;
-  max-height:         100%;
-  max-width:          100%;
+  display: inline-block;
+  page-break-inside: avoid;
+  max-height: 100%;
+  max-width: 100%;
+}
+.gallery {
+  display: block;
+  page-break-inside: avoid;
+  margin: 0 1em;
+  
+  img {
+    max-width: 100%;
+    height: 95%;
+    height: 95vh;
+  }
+}
+
+// 外字画像
+img.gaiji,
+img.gaiji-line,
+img.gaiji-wide {
+  display:    inline-block;
+  margin:     0;
+  padding:    0;
+  border:     none;
+  background: transparent;
+}
+img.gaiji {
+  width:      1em;
+  height:     1em;
+}
+img.gaiji-line {
+  width:      1em;
+  height:     auto;
+}
+img.gaiji-wide {
+  width:      auto;
+  height:     1em;
 }
 
 // 文字寄せ
@@ -114,40 +126,86 @@
 .align-left{ text-align: left; }
 .align-justify { text-align: justify; }
 
-/* 上付文字 */
+/* 上付文字、注釈 */
+.key,
+.ref,
 .super {
-  font-size:      smaller;
+  font-size: 60%;
   vertical-align: super;
 }
 /* 下付文字 */
 .sub {
-  font-size:      smaller;
+  font-size: 60%;
   vertical-align: sub;
+}
+//割注
+.wref {
+  display:inline-block;
+  font-size:50%;
+  line-height:100%;
+}
+
+//小書き
+.kogaki {
+  display: inline-block;
+  font-size: 0.8em;
+  height: 1.25em;
 }
 
 // フォント種
 .mfont { font-family: serif; }
 .gfont { font-family: sans-serif; }
 
-/* 太字
----------------------------------------------------------------- */
-/* 太字 */
+// 太字
 .bold {
   font-weight: bold;
 }
-/* 太字解除 */
 .font-weight-normal {
   font-weight: normal;
 }
-
-
-/* 斜体
----------------------------------------------------------------- */
-/* 斜体 */
+// 斜体
 .italic {
   font-style: italic;
 }
-/* 斜体解除 */
 .font-style-normal {
   font-style: normal;
 }
+//打ち消し線
+.line-through {
+  text-decoration: line-through;
+}
+
+
+//文字色
+.font-black {color: #000;}
+.font-gray {color: #84919e;}
+.font-lightgray {color: #c8c8cb;}
+.font-white {color: #fff;}
+.font-red {color: #ff4b00;}
+.font-orange {color: #f6aa00;}
+.font-yellow {color: #fff100;}
+.font-green {color: #03af7a;}
+.font-blue {color: #005aff;}
+.font-skyblue {color: #4dc4ff;}
+//背景色
+.bg-black {background-color: #000;}
+.bg-gray {background-color: #84919e;}
+.bg-lightgray {background-color: #c8c8cb;}
+.bg-white {background-color: #fff;}
+.bg-pink {background-color: #ffcabf;}
+.bg-cream {background-color: #ffff80;}
+.bg-purple {background-color: #c9ace6;}
+.bg-sky {background-color: #cae4ff;}
+//白黒反転
+.inverse {
+  color:      #ffffff;
+  background: #000000;
+  -webkit-text-emphasis-color: #000000;
+  -epub-text-emphasis-color:   #000000;
+}
+
+//フォントサイズ
+.font-85per, .font-small {font-size: 85%;}
+.font-110per, .font-bigger {font-size: 125%;}
+.font-125per, .font-big {font-size: 150%;}
+.font-150per, .font-biggest{font-size: 200%;}

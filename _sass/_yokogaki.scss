@@ -12,6 +12,55 @@ html,
     border-width: 1px;
     border-color: #000000;
   }
+  // リンク
+  a {text-decoration: underline;}
+
+//見出し
+  h1 {
+    margin: 3em 0em 3em 2em;
+  }
+  h2 {
+    margin: 3em 0em 3em 2em;
+  }
+  h3{
+    margin: 3em 0em 3em 1em;
+  }
+  .one-page{
+    margin: -0.5em 0;
+    padding: 50% 0;
+  }
+  //目次
+  ol.toc {
+    list-style-type: none;
+  }
+  #index {margin: 3em 0;}
+  .toc {
+    .toc-h1 {margin-left: 1em;}
+    .toc-h2 {margin-left: 2.5em;}
+    .toc-h3 {margin-left: 4em;}
+    .toc-h4 {margin-left: 5.5em;}
+    .toc-h5 {margin-left: 7em;}
+    .toc-h6 {margin-left: 8.5em auto 0;}
+    .toc-gal {margin-left: 1em;margin-top: 2em;}
+    a {text-decoration: none;}
+    a:hover,
+    a:active {text-decoration: underline;}
+  }
+  //小書き
+  .kogaki {
+    display: inline;
+    padding: 0 0.15em 0 0.1em
+    vertical-align: baseline;
+  }
+  //上線
+  .over-line {text-decoration: overline;}
+  //下線
+  .under-line {text-decoration: underline;}
+
+  //突き出しインデント
+  .h-indent-1em  { text-indent:  -1em; padding-left:  1em; }
+  .h-indent-2em  { text-indent:  -2em; padding-left:  2em; }
+  .h-indent-3em  { text-indent:  -3em; padding-left:  3em; }
 
   // 字下げ
   .start-1em { margin-left: 1em; }
@@ -26,7 +75,11 @@ html,
   .end-4em { margin-right: 4em; }
   .end-6em { margin-right: 6em; }
 
-  .fit {
+  .fit,
+  .gallery,
+  img.gaiji,
+  img.gaiji-line,
+  img.gaiji-wide {
     vertical-align: top;
   }
 }
