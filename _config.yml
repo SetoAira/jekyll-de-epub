@@ -40,6 +40,9 @@ id: "urn:uuid:8af73a92-2ebe-4f9e-88c5-6f351a897091"
 #方向（縦書き：rtl、横書き：ltr）
 direction: rtl
 
+#傍点のデフォルト種類
+emphasis: sesame
+
 #SVGサイズ指定
 svg:
   width: 1443
@@ -48,6 +51,9 @@ svg:
 #ギャラリーの出力
 use-gallery: true
 gallery-text: "このシーンを読む"
+
+#コミックか
+comic: false
 
 collections:
   scenario:
