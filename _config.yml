@@ -53,7 +53,7 @@ use-gallery: false
 gallery-text: "このシーンを読む"
 
 #コミックか
-comic: true
+comic: false
 
 collections:
   scenario:
