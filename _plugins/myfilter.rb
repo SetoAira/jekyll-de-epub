@@ -36,6 +36,11 @@ module Jekyll
       toc_list
       
     end
+    
+    def fix(html)
+      emstyle = @context.registers[:site].config['emphasis'] || "sesame"
+      html.gsub(/([^\\＿])?＿([^<\n]+?)＿/,'\1<span class="tcy">\2</span>').gsub(/([^\\＊])?＊([^<\n]+?)＊/,'\1<span class="em-'+emstyle+'">\2</span>').gsub(/([^\\＿])?＿《([^<\n]+?)》/,'\1<span class="sub">\2</span>').gsub(/([^\\＾])?＾《([^<\n]+?)》/,'\1<span class="super">\2</span>').gsub(/([^\\｜])?｜([^<\n]+?)《([^<\n]+?)》/,'\1<ruby>\2<rt>\3</rt></ruby>').gsub(/([一-龠々]+?)《([^<\n]+?)》/,'<ruby>\1<rt>\2</rt></ruby>').gsub(/\\(＾|＿|｜|《|》|＊)/,'\1')
+    end
 
   end
   
