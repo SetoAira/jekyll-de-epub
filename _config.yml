@@ -49,7 +49,7 @@ svg:
   height: 2048
 
 #ギャラリーの出力
-use-gallery: false
+use-gallery: true
 gallery-text: "このシーンを読む"
 
 #コミックか
