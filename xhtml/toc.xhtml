@@ -2,5 +2,6 @@
 layout: toc
 permalink: "/OPS/xhtml/toc.xhtml"
 ---
-{% for item in site.scenario %}{% assign name = item.url | split: "/" | last %}{{ item.content | toc: name }}{% endfor %}
+{% if site.comic %}{% for item in site.data.comic-toc %}    <li class="toc-h{{ item.class }}"><a href="c-{{item.name}}.xhtml">{{ item.title }}</a></li>
+{% endfor %}{% else %}{% for item in site.scenario %}{% assign name = item.url | split: "/" | last %}{{ item.content | toc: name }}{% endfor %}{% endif %}
 {% if site.use-gallery %}{% assign gal = site.data.spine | where: "name", "gallery" %}{% if gal[0].title != nil %}{% assign ngal = site.data.gallery[0] %}    <li class="toc-gal"><a href="{{ ngal.name }}">{{ gal[0].title }}</a></li>{% endif %}{% endif %}
