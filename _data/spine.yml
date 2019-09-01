@@ -8,5 +8,7 @@
 - name: toc
   title: "目次"
 - name: scenario
+- name: note
+  title: "注釈"
 - name: colophon
   title: "奥付"

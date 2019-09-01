@@ -2,7 +2,11 @@
 layout: default
 permalink: "/OPS/xhtml/note.xhtml"
 ---
+<div class="main">
 <h1>注釈</h1>
-<div epub:type="footnote" id="cyu001">
-  <p><a href="001.xhtml#nref001">注釈</a><br />注釈テスト。ある程度長い方が良いか、などと考えつつもこのくらいが精一杯。</p>
-</div>
+{% for item in site.data.notes %}<div epub:type="footnote" id="{{ item.id }}">
+  <p><a href="{{ item.link }}">{{ item.title }}</a></p>
+  <p class="start-1em">{{ item.note }}</p>
+</div>{% unless forloop.last %}
+<p><br /></p>{% endunless %}
+{% endfor %}</div>
