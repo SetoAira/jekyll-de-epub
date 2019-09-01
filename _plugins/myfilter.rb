@@ -36,6 +36,10 @@ module Jekyll
       toc_list
       
     end
+    
+    def fix(html)
+      html.gsub(/([^\\＿])＿([^\n]*?)＿/,'\1<span class="tcy">\2</span>')
+    end
 
   end
   
