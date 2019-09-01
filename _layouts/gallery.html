@@ -7,11 +7,10 @@
   <link rel="stylesheet" type="text/css" href="../style/style.css"/>
 </head>
 <body>
-<div class="main align-center">
+<div class="gallery align-center">
 
-<p><img class="fit" src="../image/{{ page.file }}" alt=""/></p>
-<p><a class="gfont bold" href="{{ page.link }}">{{ site.gallery-text }}</a></p>
-
+<a href="{{ page.link }}"><img src="../image/{{ page.file }}"/></a>
+{% if site.gallery-text != nil %}<p><a class="gfont bold" href="{{ page.link }}">{{ site.gallery-text }}</a></p>{% endif %}
 </div>
 </body>
 </html>

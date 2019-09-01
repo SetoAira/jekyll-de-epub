@@ -7,7 +7,7 @@ module Jekyll
 
       html.scan(/<h[1-6].*?<\/h[1-6]>/) do |header|
         node_name = header.match(/h[1-6]/)[0]
-        linkstr = header.sub(/<h[1-6] id="(.*?)<\/h[1-6]>/, '\1</a>')
+        linkstr = header.sub(/ class=".*?"/,'').sub(/<h[1-6] id="(.*?)<\/h[1-6]>/, '\1</a>')
         toc_list << %(    <li class="toc-#{node_name}"><a href="#{fname}##{linkstr}</li>\n)
         i += 1
       end
@@ -28,7 +28,7 @@ module Jekyll
           toc_space << ' '
           j += 1
         end
-        linkstr = header.sub(/<h[1-6] id="(.*?)>(.*?)<\/h[1-6]>/, '\1>'+toc_space+'\2</a>')
+        linkstr = header.sub(/ class=".*?"/,'').sub(/<h[1-6] id="(.*?)>(.*?)<\/h[1-6]>/, '\1>'+toc_space+'\2</a>')
         toc_list << %(      <li><a href="#{fname}##{linkstr}</li>\n)
         i += 1
       end
