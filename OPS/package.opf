@@ -28,8 +28,9 @@
 </manifest>
 
 <spine page-progression-direction="{{ site.direction }}">
-  {% for item in site.data.spine %}{% if item.name == "scenario" %}{% assign pages = site.scenario | sort: 'name' %}{% for page in pages %}<itemref idref="p-{{ page.title | split: "." | first }}" linear="yes"{% if item.properties != nil %} properties="{{ item.properties }}"{% endif %}/>
-  {% endfor %}{% elsif item.name == "gallery" and site.use-gallery %}{% for page in site.data.gallery %}<itemref idref="p-{{ page.name | split: "." | first }}" linear="yes"{% if item.properties != nil %} properties="{{ item.properties }}"{% endif %}/>
+  {% for item in site.data.spine %}{% if item.name == "scenario" %}{% if site.comic %}{% assign pages = site.pages  | sort: "name" | where: "comic", true %}{% for page in pages %}<itemref idref="p-{{ page.name | split: "." | first }}" linear="yes"{% if item.properties != nil %} properties="{{ item.properties }}"{% endif %}/>
+  {% endfor %}{% else %}{% assign pages = site.scenario | sort: 'name' %}{% for page in pages %}<itemref idref="p-{{ page.title | split: "." | first }}" linear="yes"{% if item.properties != nil %} properties="{{ item.properties }}"{% endif %}/>
+  {% endfor %}{% endif %}{% elsif item.name == "gallery" and site.use-gallery %}{% for page in site.data.gallery %}<itemref idref="p-{{ page.name | split: "." | first }}" linear="yes"{% if item.properties != nil %} properties="{{ item.properties }}"{% endif %}/>
   {% endfor %}{% else %}<itemref idref="p-{{ item.name }}" linear="{% if item.linear == "no" %}no{% else %}yes{% endif %}"{% if item.properties != nil %} properties="{{ item.properties }}"{% endif %}/>
   {% endif %}{% endfor %}
 </spine>
