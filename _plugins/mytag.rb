@@ -7,15 +7,11 @@ module Jekyll
       param = markup.split
       @link = param[0]
       @id = param[1]
-      if param[3] != nil
-        @gmark = param[3]
-      else
-        @gmark = "&gt;★"
-      end
     end
 
     def render(context)
-      %(<span class="ref" id="#{@id}"><a href="#{@link}">#{@gmark}</a></span>)
+      gmark = context.registers[:site].config['gallery-mark'] || "&gt;★"
+      %(<span class="ref" id="#{@id}"><a href="#{@link}">#{gmark}</a></span>)
     end
   end
 
@@ -27,15 +23,11 @@ module Jekyll
       param = markup.split
       @link = param[0]
       @id = param[1]
-      if param[3] != nil
-        @rmark = param[3]
-      else
-        @rmark = "※"
-      end
     end
 
     def render(context)
-      %(<span class="ref" id="#{@id}"><a epub:type="noteref" href="note.xhtml##{@link}">#{@rmark}</a></span>)
+      rmark = context.registers[:site].config['ref-mark'] || "※"
+      %(<span class="ref" id="#{@id}"><a epub:type="noteref" href="note.xhtml##{@link}">#{rmark}</a></span>)
     end
   end
   
