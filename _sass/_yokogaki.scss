@@ -63,17 +63,17 @@ html,
   .h-indent-3em  { text-indent:  -3em; padding-left:  3em; }
 
   // 字下げ
-  .start-1em { margin-left: 1em; }
-  .start-2em { margin-left: 2em; }
-  .start-3em { margin-left: 3em; }
-  .start-4em { margin-left: 4em; }
-  .start-6em { margin-left: 6em; }
+  .start-1em { padding-left: 1em; }
+  .start-2em { padding-left: 2em; }
+  .start-3em { padding-left: 3em; }
+  .start-4em { padding-left: 4em; }
+  .start-6em { padding-left: 6em; }
   // 字上げ
-  .end-1em { margin-right: 1em; }
-  .end-2em { margin-right: 2em; }
-  .end-3em { margin-right: 3em; }
-  .end-4em { margin-right: 4em; }
-  .end-6em { margin-right: 6em; }
+  .end-1em { padding-right: 1em; }
+  .end-2em { padding-right: 2em; }
+  .end-3em { padding-right: 3em; }
+  .end-4em { padding-right: 4em; }
+  .end-6em { padding-right: 6em; }
 
   .fit,
   .gallery,
