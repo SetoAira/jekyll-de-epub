@@ -23,7 +23,7 @@
   {% endif %}{% endfor %}
   {% for item in site.pages %}{% assign name = item.url | split: "/" | last %}{% assign extname = name | split: "." | last | prepend: "." %}{% if site.data.media-type[extname] != nil and name != "navigation.xhtml" %}<item media-type="{{ site.data.media-type[extname] }}" id="{% if extname == ".xhtml" %}p-{% endif %}{{ name | split: "." | first }}" href="{{ item.url | remove_first: "/OPS/" }}"{% if item.layout == 'svg' %} properties="svg"{% endif %}/>
   {% endif %}{% endfor %}
-  {% for item in site.scenario %}{% assign name = item.url | split: "/" | last %}<item media-type="application/xhtml+xml" id="p-{{ name | split: "." | first }}"  href="{{ item.url | remove_first: "/OPS/" }}"/>
+  {% for item in site.scenario %}{% assign name = item.url | split: "/" | last %}<item media-type="application/xhtml+xml" id="p-{{ name | split: "." | first }}"  href="{{ item.url | remove_first: "/OPS/" }}"{% if item.layout == 'svg' %} properties="svg"{% endif %}/>
   {% endfor %}
 </manifest>
 

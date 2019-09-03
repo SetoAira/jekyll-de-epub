@@ -10,5 +10,7 @@
 - name: scenario
 - name: note
   title: "注釈"
+- name: gallery
+  title: "ギャラリー"
 - name: colophon
   title: "奥付"

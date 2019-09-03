@@ -12,8 +12,9 @@ permalink: "/OPS/navigation.xhtml"
   <nav epub:type="toc">
     <ol>
 {% for item in site.data.spine %}{% if item.title %}{% if item.name == "gallery" %}{% assign ngal = site.data.gallery[0] %}      <li><a href="xhtml/{{ ngal.name }}">{{ item.title }}</a></li>{% else %}      <li><a href="xhtml/{{ item.name }}.xhtml">{{ item.title }}</a></li>{% endif %}
-{% elsif item.name == "scenario" %}{% if site.comic %}{% for item in site.data.comic-toc %}      <li><a href="xhtml/c-{{item.name}}.xhtml">{{ item.title }}</a></li>
-{% endfor %}{% else %}{% for item in site.scenario %}{% assign name = item.url | remove_first: "/OPS/" %}{{ item.content | nav: name }}{% endfor %}{% endif %}{% endif %}{% endfor %}
+{% elsif item.name == "scenario" %}{% if site.comic %}{% for item in site.data.comic-toc %}      <li><a href="xhtml/c-{{item.name}}.xhtml">{% include makespace.html h=item.class %}{{ item.index }}{{ item.title }}</a></li>
+{% endfor %}{% else %}{% assign items = site.scenario | sort: "name" %}{% for item in items %}{% assign name = item.url | remove_first: "/OPS/" %}{% if item.layout == "svg" %}      <li><a href="{{ name }}">{% include makespace.html h=item.class %}{{ item.index }}</a></li>
+{% else %}{{ item.content | nav: name }}{% endif %}{% endfor %}{% endif %}{% endif %}{% endfor %}
     </ol>
   </nav>
 </body>
