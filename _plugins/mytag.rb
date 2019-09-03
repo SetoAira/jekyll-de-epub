@@ -57,7 +57,7 @@ module Jekyll
   class GaijiTag < Liquid::Tag
     
     def initialize(tag_name, markup, tokens)
-      @image = markup
+      @image = markup.sub(/\s/,'')
     end
     
     def render(context)
