@@ -61,7 +61,7 @@ comic: false
 
 collections:
   scenario:
-    permalink: "/OPS/xhtml/:title"
+    permalink: "/OPS/xhtml/:name"
     output: true
 
 defaults:
