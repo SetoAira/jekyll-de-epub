@@ -1,4 +1,8 @@
 ---
+#ePubのファイル名
+book_name: book
+epub_output: false
+
 #作品名
 title:
   name: "jekyllでePub"
