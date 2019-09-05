@@ -18,7 +18,6 @@ Jekyll::Hooks.register :site, :post_write do |site|
   if site.config['epub_output']
 
     bookfiles = Dir.glob('OPS/**/*').sort
-
     Zip::OutputStream.open(bookname) do |out|
       out.put_next_entry("mimetype", '', '', Zip::Entry::STORED)
       out.write( File.read("mimetype") )
@@ -27,7 +26,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
 
       bookfiles.each {
         |bookfile|
-        next if gallery_dir.chars.first == "." or bookfile.include?(".map")
+        next if bookfile.chars.first == "." or bookfile.include?(".map")
         next unless bookfile.include?(".")
         out.put_next_entry(bookfile)
         out << File.read(bookfile).force_encoding('us-ascii')
@@ -45,5 +44,4 @@ Jekyll::Hooks.register :documents, :pre_render do |document|
   else
     document.url << ".xhtml"
   end
-  puts document.url
 end

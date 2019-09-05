@@ -143,13 +143,12 @@ img.gaiji-wide {
   display:inline-block;
   font-size:50%;
   line-height:100%;
+  vertical-align: baseline;
 }
 
 //小書き
 .kogaki {
-  display: inline-block;
-  font-size: 0.8em;
-  height: 1.25em;
+  font-size: 75%;
 }
 
 // フォント種

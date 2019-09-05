@@ -1,7 +1,7 @@
 ---
 #ePubのファイル名
 book_name: book
-epub_output: false
+epub_output: true
 
 #作品名
 title:
