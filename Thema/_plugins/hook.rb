@@ -14,7 +14,6 @@ Jekyll::Hooks.register :site, :post_write do |site|
   
   Dir.chdir("_site/")
   bookname = "../" + site.config['book_name'] + ".epub"
-  File.delete(bookname) if File.file?(bookname)
   if site.config['epub_output']
 
     bookfiles = Dir.glob('OPS/**/*').sort
@@ -32,9 +31,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
         out << File.read(bookfile).force_encoding('us-ascii')
       }
     end
-
   end
-  
 end
 
 Jekyll::Hooks.register :documents, :pre_render do |document|
@@ -44,4 +41,10 @@ Jekyll::Hooks.register :documents, :pre_render do |document|
   else
     document.url << ".xhtml"
   end
+end
+
+Jekyll::Hooks.register :site, :after_init do |site|
+  Dir.chdir(site.source)
+  bookname = site.config['book_name'] + ".epub"
+  File.delete(bookname) if File.file?(bookname)
 end
