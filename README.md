@@ -10,7 +10,7 @@ Theme：Jekyllのテーマに当たる基本骨格部分。
 sample：実際に作成したサンプル。できあがりのepubファイルと、その手前の_siteフォルダ、構成要素。
 
 ## 必要なもの
-[Jekyll](https://jekyllrb.com/)
+[Jekyll](https://jekyllrb.com/)  
 [rubyzip](https://github.com/rubyzip/rubyzip)：ePubにまとめるのに使用。
 
 ## 参考
