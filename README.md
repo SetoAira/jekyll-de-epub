@@ -3,7 +3,15 @@ Jekyllを利用して、ePubファイルを作る試み。
 
 ePubファイルはhtmlファイルの集まり（のようなもの）  
 Jekyllはマークダウンファイルをhtml化できる  
-ということは、Jekyllを使えばマークダウンで書いた小説をePub仕様にできるのでは
+ということは、Jekyllを使えばマークダウンで書いた小説をePub仕様にできるのでは、と言うことでやってみました。
+
+## 構成
+Theme：Jekyllのテーマに当たる基本骨格部分。
+sample：実際に作成したサンプル。できあがりのepubファイルと、その手前の_siteフォルダ、構成要素。
+
+## 必要なもの
+[Jekyll](https://jekyllrb.com/)
+[rubyzip](https://github.com/rubyzip/rubyzip)：ePubにまとめるのに使用。
 
 ## 参考
 ### ePub
